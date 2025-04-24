@@ -1,0 +1,89 @@
+@import 'tailwindcss';
+
+@theme {
+    --font-display: 'Graphik', sans-serif;
+    --font-size-base: 1rem;
+    --font-weight-base: 400;
+    --max-width: 1440px;
+
+    /* Colors */
+    --color-grey-100: #D4D4D4;
+    --color-grey-200: #6E6E6E;
+    --color-grey-300: #F2F4F5;
+    --color-grey-400: #595959;
+    --color-grey-500: #767677;
+    --color-grey-600: #A6A8A9;
+
+    /* White */
+    --color-white-100: #282828;
+    --color-white-200: #F2F2F2;
+
+    /* Brand Color */
+    --color-brand-primary: #A245E4;
+    --color-brand-secondary: #2C2242;
+    --color-brand-tertiary: #B798BE;
+
+    /* Green */
+    --color-green-100: #00aa55;
+
+    /* Red */
+    --color-semantics-red: #e32b2b;
+  
+}
+
+@keyframes scroll {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes scroll-reverse {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(50%);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 40s linear infinite;
+}
+
+.animate-scroll-slow {
+    animation: scroll 40s linear infinite;
+}
+
+.animate-scroll-slow-reverse {
+    animation: scroll-reverse 60s linear infinite;
+}
+
+.animate-scroll-reverse {
+    animation: scroll-reverse 60s linear infinite;
+}
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+}
+
+@layer components {
+    .wrapper {
+        width: 90%;
+        margin: auto;
+        max-width: var(--max-width);
+    }
+}
+
+body {
+    font-family: var(--font-display);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-base);
+}

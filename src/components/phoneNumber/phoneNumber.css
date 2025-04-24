@@ -1,0 +1,10 @@
+select{
+    background-color: transparent;
+    font-size: 14px;
+}
+.phone-input-container img {
+        width: 24px;
+}
+.phone-input-container input{
+    outline: none;
+}
